@@ -26,7 +26,7 @@ async def async_setup(hass, config):
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
     """Set up the Velux KLF platforms via Config Flow."""
-    _LOGGER.debug("Setting up velux entry: %s", entry.data)
+    _LOGGER.debug("Setting up velux entry via config flow")
     host = entry.data[CONF_HOST]
     password = entry.data[CONF_PASSWORD]
     gateway = PyVLX(host=host, password=password)
